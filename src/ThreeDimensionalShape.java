@@ -13,4 +13,6 @@ public abstract class ThreeDimensionalShape extends Shape {
     public void setVolume(double volume) {
         this.volume = volume;
     }
+
+    abstract void calculateVolume();
 }
