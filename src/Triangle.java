@@ -1,7 +1,8 @@
-public class Triange extends Square{
+public class Triangle extends Square{
 
-    public Triange(double length) {
+    public Triangle(double length) {
         super(length);
+        super.calculateArea();
         calculateArea();   //Right Triangle 1/2 area
     }
 

@@ -4,6 +4,7 @@ public class Sphere extends ThreeDimensionalShape {
 
     public Sphere(double radius) {
         this.radius = radius;
+        calculateVolume();
 
     }
 

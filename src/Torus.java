@@ -6,6 +6,7 @@ public class Torus extends ThreeDimensionalShape {
     public Torus(double minorRadius, double majorRadius) {
         minor = new Circle(minorRadius);
         major = new Circle(majorRadius);
+        calculateVolume();
     }
 
     @Override
