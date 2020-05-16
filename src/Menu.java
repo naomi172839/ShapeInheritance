@@ -46,6 +46,10 @@ public class Menu {
     }
 
     private void getChoice() {
+        while(!input.hasNextInt()) {
+            System.out.println("Please enter a valid choice");
+            input.next();
+        }
         choice = input.nextInt();
         while (choice < 1 || choice > 10) {
             System.out.println("Please choose a valid choice");
@@ -53,11 +57,31 @@ public class Menu {
         }
     }
 
+    private void getContinue() {
+        System.out.println("Would you like to continue? [Y/N]");
+        while(!input.hasNext()) {
+            System.out.println("Please enter a valid choice");
+        }
+        String con = input.next();
+        while(!con.equals("Y") && !con.equals("N")) {
+            System.out.println("Please enter a valid choice");
+            con = input.next();
+        }
+        if(con.equals("Y")) {
+            choice = -1;
+        } else {
+            choice = 10;
+        }
+    }
+
     private void menuDriver() {
         while(choice != 10) {
             displayChoices();
             getChoice();
-            ShapeFactory.makeShape(choice, input);
+            Shape shape = ShapeFactory.makeShape(choice, input);
+            if(choice != 10) {
+                getContinue();
+            }
         }
         displayClose();
     }
