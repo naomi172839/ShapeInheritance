@@ -18,6 +18,7 @@ public class Cube extends ThreeDimensionalShape {
      * @param length Represents the length of one side of the cube.
      */
     public Cube(double length) {
+        super();
         this.face = new Square(length);
         this.length = length;
         calculateVolume();

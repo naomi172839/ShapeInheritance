@@ -17,6 +17,7 @@ public class Circle extends TwoDimensionalShape {
      * @param radius The radius of the circle
      */
     public Circle(double radius) {
+        super();
         this.radius = radius;
         calculateArea();
         calculateCircumference();

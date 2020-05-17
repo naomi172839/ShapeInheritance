@@ -17,6 +17,7 @@ public class Rectangle extends TwoDimensionalShape {
      * @param width Represents the width of the rectangle
      */
     public Rectangle(double length, double width) {
+        super();
         this.length = length;
         this.width = width;
         calculateArea();

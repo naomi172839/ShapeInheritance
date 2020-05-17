@@ -19,6 +19,7 @@ public class Cone extends ThreeDimensionalShape{
      * @param height Represents the height of the cone
      */
     public Cone(double radius, double height) {
+        super();
         this.base = new Circle(radius);
         this.height = height;
         calculateVolume();

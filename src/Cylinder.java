@@ -18,6 +18,7 @@ public class Cylinder extends ThreeDimensionalShape {
      * @param radius Represents the radius of the base.
      */
     public Cylinder(double radius, double height) {
+        super();
         this.base = new Circle(radius);
         this.height = height;
         calculateVolume();
